@@ -110,6 +110,6 @@ class TodoViewsTestCase(TestCase):
 
     def test_detail_get_fail(self):
         client = Client()
-        response = client.get("/1/")
+        response = client.get('/1/')
 
         self.assertEqual(response.status_code, 404)
