@@ -6,6 +6,13 @@
     <title>To Do Application</title>
     <meta charset="UTF-8">
     <meta name="author" content="INIAD">
+    <style>
+      .task-item {
+        border-bottom: 1px dashed #0ff;
+        padding: 10px;        
+        justify-content: space-between;
+      }
+    </style>
   </head>
 
   <body>
@@ -35,7 +42,7 @@
     {% for task in tasks %}
     <div class="text">
       <h2><a href="{% url 'detail' task.id %}">{{ task.title }}</a></h2>
-      <ul>
+      <ul class="task-item">
         <li>Posted at: {{ task.posted_at }}</li>
         {% if task.due_at %} 
         <li>Due at: {{ task.due_at }}</li>
