@@ -4,6 +4,7 @@ from django.utils import timezone
 
 class Task(models.Model):
     title = models.CharField(max_length=100)
+    Description = models.CharField(max_length=500, default='')#500文字まで
     completed = models.BooleanField(default=False)
     posted_at = models.DateTimeField(default=timezone.now)
     due_at = models.DateTimeField(null=True, blank=True)

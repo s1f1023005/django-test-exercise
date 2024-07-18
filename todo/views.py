@@ -8,6 +8,7 @@ from todo.models import Task
 def index(request):
     if request.method == "POST":
         task = Task(title=request.POST["title"],
+                    Description=request.POST["Description"],
                     due_at=make_aware(parse_datetime(request.POST["due_at"])))
         task.save()
 
