@@ -6,9 +6,18 @@
     <title>To Do Application</title>
     <meta charset="UTF-8">
     <meta name="author" content="INIAD">
+    <style>
+      .task-item {
+        border: 2px solid #0ff;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+      }
+    </style>
   </head>
 
   <body>
+    <div class="task-item">
     <h1>{{ task.title }}</h1>
     <ul>
       <li>Posted at: {{ task.posted_at }}</li>
@@ -27,6 +36,7 @@
       | <a href="{% url 'update' task.id %}">Edit</a>
       | <a href="{% url 'delete' task.id %}">Delete</a>
       | <a href="{% url 'close' task.id %}">Close</a>
+    </div>
     </div>
   </body>
 
